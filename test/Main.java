@@ -12,6 +12,9 @@ public class Main {
 		people.add(new Person("Jiro", 25));
 		people.add(new Person("Ami", 17));
 		people.add(new Person("Satoshi", 30));
+		people.add(new Student("Kenta", 19, "東京高校"));
+		people.add(new Student("Mai", 21, "大阪大学"));
+
 		
 		System.out.println("全員の自己紹介:");
 		for (Person p : people) {
