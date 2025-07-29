@@ -9,7 +9,7 @@ public class Person {
 		this.age = age;
 	}
 	
-	public String getName(){
+	public String getName() {
 		return this.name;
 	}
 	
@@ -20,14 +20,13 @@ public class Person {
 	public void setAge(int age) {
 		if (age >= 0) {
 			this.age = age;
-			System.out.println(this.name + "の年齢を" + this.age + "に更新しました。");
 		}
 		else {
-			System.out.println("Invailed value");
+			System.out.println("Invalid value");
 		}
 	}
 	
-	public void introduce() {
-		System.out.println("私は" + name + "です。" + age + "歳です。");
+	public void introduce(){
+		System.out.println("私は" + this.name + "です。" + this.age + "です。");
 	}
 }
