@@ -1,21 +1,38 @@
 package test;
+
 import java.util.ArrayList;
 
 public class Main {
 
 	public static void main(String[] args) {
-		ArrayList<Animal> Animals = new ArrayList<>();
+		ArrayList<Character> characters = new ArrayList<>();
 		
-		Animals.add(new Dog("ポチ", 4));
-		Animals.add(new Dog("イヌ", 6));
-		Animals.add(new Cat("ミー", 3));
-		Animals.add(new Cat("ネコ", 5));
+		characters.add(new Warrior("Taro", 12));
+		characters.add(new Wizard("Hanako", 9));
+		characters.add(new Archer("Souta", 15));
+		characters.add(new Warrior("Ken", 8));
+		characters.add(new Wizard("Ami", 13));
+		characters.add(new Archer("Ren", 7));
 		
-		
-		System.out.println("4歳以上:");
-		for (Animal a : Animals) {
-			if (a.getAge() >=4)
-			a.introduce();
+		System.out.println("【全キャラクター紹介】");
+		for (Character c : characters) {
+			c.introduce();
 		}
+
+		System.out.println("【レベル10以上のキャラクター】");
+		for (Character c : characters) {
+			if (c.getLevel() >= 10) {				
+				c.introduce();
+			}
+		}
+		
+		System.out.println("【魔法使いのみ】");
+		for (Character c : characters) {
+			if (c instanceof Wizard) {				
+				c.introduce();
+			}
+		}
+		
+		System.out.println("【登録されたキャラクター数: " + characters.size() + "】");
 	}
 }
