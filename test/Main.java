@@ -1,11 +1,16 @@
 package test;
+import java.util.ArrayList;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Person person1 = new Person("Taro", 20);
-		person1.introduce();
-		Person person2 = new Person("Hanako", 18);
-		person2.introduce();
+		ArrayList<Person> people = new ArrayList<>();
+		
+		people.add(new Person("Taro", 20));
+		people.add(new Person("Hanako", 18));
+		
+		for (Person p : people) {
+			p.introduce();
+		}
 	}
 }
